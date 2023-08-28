@@ -217,6 +217,17 @@ class BookShelve extends Component {
                 </button>
               </div>
             </div>
+            <ul className="sides">
+              <h1 className="heading">Bookshelves</h1>
+              {bookshelvesList.map(each => (
+                <SideBar
+                  key={each.id}
+                  data={each}
+                  setActiveId={this.setActiveID}
+                  activeTab={activeId === each.id}
+                />
+              ))}
+            </ul>
             {this.renderSwitch()}
           </div>
         </div>
